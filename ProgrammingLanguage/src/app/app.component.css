@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+body {
+    margin: 0;
+    font-family: 'Comfortaa', cursive;
+    background-color: rgb(7, 18, 26);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topnav {
+    background-color: black;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 80px;
+}
+
+.links {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin: 12px;
+    float: left;
+    font-size: 20px;
+    display: block;
+    border-radius: 6px;
+}
+
+.activebutton {
+    border: 2px solid rgba(255, 94, 94, 1);
+    background-color: rgba(255, 94, 94, 1);
+    color: white;
+}
+
+.topnav .activebutton:hover {
+    color: white;
+    border-radius: 28px;
+}
+
+.links:hover {
+    color: rgba(255, 94, 94, 1);
+    transition-duration: 0.2s;
+}
+
+.topnav form input {
+    padding: 10px;
+    margin: 12px;
+    border-radius: 6px;
+    border: 1px solid #000;
+}
+
+.topnav .loginform {
+    float: right;
+}
+
+.buttons {
+    background-color: rgba(255, 94, 94, 1);
+    border: 1px solid #000;
+    border-radius: 6px;
+}
+
+.buttons:hover {
+    opacity: 80%;
+    border-radius: 28px;
+}
+
+.maindiv {
+    color: green;
+    border-radius: 2px solid;
+}
+
+.title {
+    margin: 30px;
+    color: white;
+}
