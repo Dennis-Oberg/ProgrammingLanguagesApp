@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { from } from 'rxjs';
+import{ CProgLanguages} from 'src/model/CProgLanguages'
 
 @Component({
   selector: 'app-programminglanguages',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./programminglanguages.component.css']
 })
 export class ProgramminglanguagesComponent implements OnInit {
-
-  constructor() { }
+  
+  
+  public proglanglist: CProgLanguages[];
+  constructor() { 
+    
+    
+  }
 
   ngOnInit(): void {
   }
-
 }

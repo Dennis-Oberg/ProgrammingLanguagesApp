@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+p,
+span {
+    font-family: 'Bungee', cursive;
+    color: rgb(0, 0, 0);
+    font-size: 36px;
+    height: 30px;
+}
