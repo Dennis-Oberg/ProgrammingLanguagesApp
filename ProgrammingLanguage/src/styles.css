@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+footer {
+    font-family: 'Bungee', cursive;
+    font-size: 20px;
+    color: rgba(255, 94, 94, 1);
+    position: absolute;
+    background-color: black;
+    width: 100%;
+}
+
+footer p {
+    padding-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(80, 145, 74);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
