@@ -12,5 +12,11 @@
         </div>
 
 
+
+
+        <ul *ngFor="let language of proglanglist$ | async">
+            <li>{{ language.Name }}</li>
+        </ul>
+
     </div>
 </body>
