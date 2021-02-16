@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
-import{ CProgLanguages} from 'src/model/CProgLanguages'
+import { ProgrammingServiceService } from '../../services/programming-service.service';
+import { CProgLanguages } from 'src/model/CProgLanguages';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-programminglanguages',
@@ -10,12 +12,16 @@ import{ CProgLanguages} from 'src/model/CProgLanguages'
 export class ProgramminglanguagesComponent implements OnInit {
   
   
-  public proglanglist: CProgLanguages[];
-  constructor() { 
+
+  proglanglist$: Observable<any[]>;
+  
+  constructor(private progservice: ProgrammingServiceService) { 
+
     
-    
+
   }
 
   ngOnInit(): void {
+    this.proglanglist$ = this.progservice.getLanguage();
   }
 }

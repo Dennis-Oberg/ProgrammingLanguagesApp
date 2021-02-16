@@ -5,5 +5,8 @@
                 Pick a language to read about!
             </h1>
         </div>
+        <ul *ngFor="let language of proglanglist$ | async">
+            <li>{{ language.Name }}</li>
+        </ul>
     </div>
 </body>
