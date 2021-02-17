@@ -6,20 +6,17 @@
     </div>
     <div class="WelcomeWrapper">
         <div class="WelcomeText">
-            <ul *ngFor="let language of proglanglist$ | async">
-                <li>{{ language.Name }}</li><br>{{language.Founder}}
+            <ul>
+                <li *ngFor="let item of proglanguages">
+                    <a [routerLink]="['/details', item.id]"
+                    routerLinkActive="active-link"
+                    *ngFor="let item of proglanguages">{{ item.Name }}</a>
+                </li>
             </ul>
         </div>
 
+         
+   
 
-
-
-
-
-        <ul>
-            <li *ngFor="let language of proglanglist$ | async">
-                <a routerLink="/details/{{ language.id }}">{{ language.Name }}</a>
-            </li>
-        </ul>
     </div>
     < </body>

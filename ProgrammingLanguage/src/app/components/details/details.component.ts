@@ -15,8 +15,8 @@ export class DetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, private languageService: ProgrammingServiceService) { }
 
-  ngOnInit() {
-    const name = this.route.snapshot.paramMap.get('name');
+  ngOnInit(): void {
+    const name = this.route.snapshot.paramMap.get('id');
     this.languageService.getLanguage(name).subscribe(j => this.language = j);
   }
 }
