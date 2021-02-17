@@ -23,13 +23,16 @@ export class ProgrammingServiceService {
       return {id, ...data};
       }
     ))
-  );
-      
-}
-getLanguage(id: string): Observable<CProgLanguages> {
-  this.detailsDoc = this.afs.doc<CProgLanguages>(`Languages/${id}`);
-  this.details = this.detailsDoc.valueChanges();
-  return this.details;
+  );      
 }
 
+getPlayer(): Observable<CProgLanguages[]> {
+  return this.languages;
+}
+
+getLanguage(id: string): Observable<CProgLanguages> {
+    this.detailsDoc = this.afs.doc<CProgLanguages>(`Languages/${id}`);
+    this.details = this.detailsDoc.valueChanges();
+    return this.details;
+  }
 }

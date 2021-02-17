@@ -27,7 +27,7 @@ import { DetailsComponent } from './components/details/details.component';
       {path:'', redirectTo:'/Welcome-Page',pathMatch:'full'},
       {path:'Welcome-Page', component:WelcomepageComponent},
       {path:'Programming-Languages', component:ProgramminglanguagesComponent},
-      {path:'details/:id', component:DetailsComponent}
+      {path:'details/:name', component:DetailsComponent}
     ])
   ],
   providers: [],

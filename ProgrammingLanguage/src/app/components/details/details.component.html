@@ -1,7 +1,15 @@
-<h1>Details</h1>
-<div *ngIf="language">
-Name: {{ languages.Name }} <br/>
-Founder: {{ languages.Founder }} <br/>
-Founded: {{ languages.Founded }} <br/>
-Description: {{ languages.Description }}
-</div>
+<body>
+    <div class="proglangtitle">
+        <h1>Details</h1>
+    </div>
+    <div class="WelcomeWrapper">
+        <div class="WelcomeText">
+            <ul *ngIf="language">
+                <li>Name: {{ language.Name }} </li>
+                <li>Founder: {{ language.Founder }} </li>
+                <li>Founded: {{ language.Founded }} </li>
+                <li>Description: {{ language.Description }} </li>
+            </ul>
+        </div>
+    </div>
+</body>

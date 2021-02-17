@@ -7,8 +7,10 @@
     <div class="WelcomeWrapper">
         <div class="WelcomeText">
             <ul>
-                <li *ngFor="let language of proglanglist$ | async">
-                    <a routerLink="/details/{{ language.id }}">{{ language.Name }}</a>
+                <li *ngFor="let item of proglanguages">
+                    <a [routerLink]="['/details', item.id]"
+                    routerLinkActive="active-link"
+                    *ngFor="let item of proglanguages">{{ item.Name }}</a>
                 </li>
             </ul>
         </div>

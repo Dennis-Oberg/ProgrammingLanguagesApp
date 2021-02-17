@@ -11,18 +11,19 @@ import { Observable } from 'rxjs';
 })
 export class ProgramminglanguagesComponent implements OnInit {
   
-  
-
-  proglanglist$: Observable<any>;
+  proglanguages: CProgLanguages[];
   
   constructor(private af: AngularFirestore, private progservice: ProgrammingServiceService) { 
 
-    this.proglanglist$ = af.collection("Languages").valueChanges();
+    //this.proglanglist$ = af.collection("Languages").valueChanges();
 
   }
 
   ngOnInit(): void {
    
+    this.progservice.getPlayer().subscribe(p => { 
+      this.proglanguages = p;
+    });
 
   }
 }
