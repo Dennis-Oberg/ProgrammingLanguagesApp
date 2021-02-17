@@ -5,9 +5,13 @@
         </h1>
     </div>
     <div class="WelcomeWrapper">
-        <div class="WelcomeText">
+        <div class="firstwelcomediv">
             <h1>There are alot of programming languages! <br><br> Press the button below to get an overview of some of them!</h1>
-            <button class="buttons"><p>Show History</p></button>
+            <button (click)="toggleShow()" class="buttons"><p>Show History</p></button>
         </div>
+        <div *ngIf="isShown" class="secondwelcomediv">
+            <h1>asdasdasdasd</h1>
+        </div>
+
     </div>
 </body>

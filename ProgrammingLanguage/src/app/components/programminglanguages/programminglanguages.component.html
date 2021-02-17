@@ -6,17 +6,15 @@
     </div>
     <div class="WelcomeWrapper">
         <div class="WelcomeText">
-            <ul>
-                <li></li>
+            <ul *ngFor="let language of proglanglist$ | async">
+                <li>{{ language.Name }}</li><br>{{language.Founder}}
             </ul>
         </div>
 
 
 
 
-        <ul *ngFor="let language of proglanglist$ | async">
-            <li>{{ language.Name }}</li>
-        </ul>
+
 
     </div>
 </body>

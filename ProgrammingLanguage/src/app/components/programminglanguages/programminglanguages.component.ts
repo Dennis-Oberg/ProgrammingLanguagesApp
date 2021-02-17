@@ -11,15 +11,12 @@ import { Observable } from 'rxjs';
 })
 export class ProgramminglanguagesComponent implements OnInit {
   
-  
+ 
 
   proglanglist$: Observable<any[]>;
   
-  constructor(private progservice: ProgrammingServiceService) { 
-
-    
-
-  }
+  constructor(private progservice: ProgrammingServiceService) { }
+  
 
   ngOnInit(): void {
     this.proglanglist$ = this.progservice.getLanguage();
