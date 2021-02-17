@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
 .WelcomeWrapper {
-    background-image: url("https://i.ibb.co/mGK30gv/novacek.jpg");
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgb(133, 143, 143) 0%, rgb(21, 158, 212) 100%);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -42,6 +43,6 @@
     box-shadow: 0 0 10px 8px rgb(2, 2, 2);
 }
 
-    ul li {
-    color:white;
+ul li {
+    color: white;
 }

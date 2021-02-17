@@ -16,7 +16,7 @@ export class ProgramminglanguagesComponent implements OnInit {
   proglanglist$: Observable<any>;
   
 
-  constructor(private progservice: ProgrammingServiceService) { }
+
   
 
   constructor(private af: AngularFirestore, private progservice: ProgrammingServiceService) { 
