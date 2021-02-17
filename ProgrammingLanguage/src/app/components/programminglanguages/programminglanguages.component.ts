@@ -13,15 +13,16 @@ export class ProgramminglanguagesComponent implements OnInit {
   
   
 
-  proglanglist$: Observable<any[]>;
+  proglanglist$: Observable<any>;
   
-  constructor(private progservice: ProgrammingServiceService) { 
+  constructor(private af: AngularFirestore, private progservice: ProgrammingServiceService) { 
 
-    
+    this.proglanglist$ = af.collection("Languages").valueChanges();
 
   }
 
   ngOnInit(): void {
-    this.proglanglist$ = this.progservice.getLanguage();
+   
+
   }
 }
