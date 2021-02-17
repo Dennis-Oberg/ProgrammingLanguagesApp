@@ -12,12 +12,11 @@ import { Observable } from 'rxjs';
 export class ProgramminglanguagesComponent implements OnInit {
   
   proglanguages: CProgLanguages[];
-  
+ 
   constructor(private af: AngularFirestore, private progservice: ProgrammingServiceService) { 
 
-    //this.proglanglist$ = af.collection("Languages").valueChanges();
-
   }
+
 
   ngOnInit(): void {
    
