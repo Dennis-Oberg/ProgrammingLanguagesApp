@@ -1,0 +1,9 @@
+.login_form {
+    padding: 25px;
+    width: 350px;
+    margin-left: auto;
+    background-color: bisque;
+    text-align: center;
+    position: relative;
+    border: 10px;
+}

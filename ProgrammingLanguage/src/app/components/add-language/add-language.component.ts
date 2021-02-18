@@ -15,10 +15,10 @@ export class AddLanguageComponent implements OnInit {
   language: any;
 
   form = new FormGroup({
-    Name: new FormControl(''),
-    Founder: new FormControl(''),
+    Name: new FormControl(),
+    Founder: new FormControl(),
     Founded: new FormControl(),
-    Description: new FormControl('')
+    Description: new FormControl()
 });
   constructor(private firestore: AngularFirestore, private fb: FormBuilder) { }
 
@@ -26,7 +26,10 @@ export class AddLanguageComponent implements OnInit {
   }
   onSubmit(){
     this.firestore.collection('Languages').add({
-      Name: this.form.value.Name
+      Name: this.form.value.Name,
+      Founder: this.form.value.Founder,
+      Founded: this.form.value.Founded,
+      Description: this.form.value.Description
       
   })
   .then(res => {
