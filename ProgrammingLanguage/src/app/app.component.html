@@ -15,21 +15,24 @@
             <a class="links" routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</a>
             <a class="links" routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming
                 Languages</a>
+            <a class="links" *ngIf="isLoggedIn" routerLinkActive="activebutton" routerLink="/Database-Submit">
+                <p>Submit to database</p>
+            </a>
             <div class="loginform_wrapper">
                 <div class="loginform">
-                    <div class="loginDiv" *ngIf="isLoggedIn">Logged in as: {{ loggedInUser }}
-                        <button (click)="onLogoutClick()">Logout</button>
-
+                    <div class="loginDiv" *ngIf="isLoggedIn">
+                        <p>Logged in as: {{ loggedInUser }}</p>
                     </div>
-                    
-                    <button (click)="openForm()" class="buttons">
-                        <p>Click here to login</p>
+
+                    <button class="buttons">
+                        <p *ngIf="!isLoggedIn" (click)="openForm()">Login</p>
+                        <p *ngIf="isLoggedIn"  (click)="onLogoutClick()">logout</p>
                     </button>
-                    <button *ngIf="isLoggedIn" class="buttons" routerLink="/Database-Submit">
-                        <p>Submit to database</p>
-                    </button>
-                    
-                    <app-login></app-login>
+
+                    <div class="logincenter">
+                        <app-login></app-login>
+                    </div>
+
                 </div>
 
             </div>

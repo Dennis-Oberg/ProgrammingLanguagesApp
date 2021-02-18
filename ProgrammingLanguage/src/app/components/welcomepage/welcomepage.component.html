@@ -13,7 +13,7 @@
         <div *ngIf="isShown" class="secondwelcomediv">
             <h2>Ever since the invention of Charles Babbage’s difference engine in 1822, computers have required a means of instructing them to perform a specific task. This means is known as a programming language. Computer languages were first composed
                 of a series of steps to wire a particular program; these morphed into a series of steps keyed into the computer and then executed; later these languages acquired advanced features such as logical branching and object orientation. The computer
-                languages of the last fifty years have come in two stages, the first major languages and the second major languages, which are in use today.</h2>
+                languages of the last fifty years have come in two stages, the first major languages and the second major languages, which are in use today. <br> <em><h2 *ngIf="!isLoggedIn">To see more details, you have to log in!</h2></em> </h2>
         </div>
-    </div>        
+    </div>
 </body>

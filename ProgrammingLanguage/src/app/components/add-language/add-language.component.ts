@@ -13,13 +13,17 @@ export class AddLanguageComponent implements OnInit {
 
   langForm: FormGroup;
   language: any;
+  
+
 
   form = new FormGroup({
+    
     Name: new FormControl(),
-    Founder: new FormControl(),
+    Founder:  new FormControl(), 
     Founded: new FormControl(),
     Description: new FormControl()
 });
+
   constructor(private firestore: AngularFirestore, private fb: FormBuilder) { }
 
   ngOnInit(): void {
