@@ -8,9 +8,8 @@
     width: 300px;
     padding: 10px;
     background-color: white;
-    -webkit-box-shadow: 0 35px 20px rgb(0, 0, 0);
-    -moz-box-shadow: 0 35px 20px rgb(0, 0, 0);
-    box-shadow: 0 35px 20px rgb(0, 0, 0);
+    -webkit-box-shadow: 1px 0px 32px 29px rgba(0, 0, 0, 0.46);
+    box-shadow: 1px 0px 32px 29px rgba(0, 0, 0, 0.46);
 }
 
 .form-container input[type=email],
