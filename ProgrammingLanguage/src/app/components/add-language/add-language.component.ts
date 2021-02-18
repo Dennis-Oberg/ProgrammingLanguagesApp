@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from "@Angular/forms";
+import { FormControl, FormGroup, FormBuilder, Validators } from "@Angular/forms";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 
@@ -26,6 +26,7 @@ export class AddLanguageComponent implements OnInit {
   }
   
 
+
   verifyDigits(input): boolean { //Kollar så att årinparameter bara innehåller siffror
     let counter = 0;
     for (var i = 0; i < input.length; i++) {
@@ -35,6 +36,7 @@ export class AddLanguageComponent implements OnInit {
     }
     return counter==input.length;
 }
+
 
 
   onSubmit(){
