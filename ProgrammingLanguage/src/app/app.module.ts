@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { ReactiveFormsModule } from "@Angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
 
 
  
@@ -35,6 +35,7 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
     AngularFireAuthModule,
     AngularFirestoreModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forRoot([
       {path:'', redirectTo:'/Welcome-Page', pathMatch:'full'},
       {path:'Welcome-Page', component:WelcomepageComponent},

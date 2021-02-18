@@ -1,15 +1,19 @@
 
 <div class="form-popup" id="hiddenLogin">
-    <form class="form-container">
+    <form (submit)="onSubmit()" class="form-container">
     
       <label for="email"><b>Email</b></label>
-      <h1>{{ email }}</h1>
-      <input type="text" placeholder="Enter Email" required>
+      <input type="email" [(ngModel)]="email" name="email" placeholder="Enter Email" required>
   
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" required>
+      <input type="password" [(ngModel)]="password" name="password" placeholder="Enter Password" required>
   
-      <button type="submit" (click)="onSubmit()" class="btn">Login</button>
+      <input type="submit" value="Login" class="btn">
       <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
+      <span *ngIf="error">{{ error }}</span>
     </form>
   </div>
+
+
+ 
+    

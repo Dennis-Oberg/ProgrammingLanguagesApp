@@ -16,13 +16,14 @@
                 Languages</a>
             <div class="loginform_wrapper">
                 <div class="loginform">
+                    <div *ngIf="isLoggedIn"><a href="#" (click)="onLogoutClick()">Logout: {{ loggedInUser }}</a></div>
                     <button (click)="openForm()" class="buttons">
                         <p>Click here to login</p>
                     </button>
                     <button class="buttons" routerLink="/Database-Submit">
                         <p>Submit to database</p>
                     </button>
-                    <div *ngIf="isLoggedIn"><a href="#" (click)="onLogoutClick()">Logout{{ loggedInUser }}</a><br /></div>
+                    
                     <app-login></app-login>
                 </div>
             </div>

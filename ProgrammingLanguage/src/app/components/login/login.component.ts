@@ -30,6 +30,7 @@ export class LoginComponent implements OnInit {
     this.authService.login(this.email, this.password)
       .then(res => {
         this.router.navigate(['/']);
+        document.getElementById("hiddenLogin").style.display = "none";
       })
       .catch(err => {
         this.error = err;

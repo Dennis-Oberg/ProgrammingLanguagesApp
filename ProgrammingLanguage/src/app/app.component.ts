@@ -29,7 +29,7 @@ export class AppComponent implements OnInit {
 
   onLogoutClick() {
     this.authService.logOut();
-    }
+  }
     
 
   openForm() {
