@@ -35,4 +35,5 @@ getLanguage(id: string): Observable<CProgLanguages> {
     this.details = this.detailsDoc.valueChanges();
     return this.details;
   }
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { ProgrammingServiceService } from '../../services/programming-service.service';
 import { CProgLanguages} from 'src/model/CProgLanguages';
+import { Observable } from 'rxjs';
 
 @Component({
 selector: 'app-details',
@@ -13,10 +14,20 @@ export class DetailsComponent implements OnInit {
 
   language: CProgLanguages;
 
-  constructor(private route: ActivatedRoute, private languageService: ProgrammingServiceService) { }
 
-  ngOnInit(): void {
-    const name = this.route.snapshot.paramMap.get('id');
-    this.languageService.getLanguage(name).subscribe(j => this.language = j);
+  constructor(private route: ActivatedRoute, private languageService: ProgrammingServiceService) { 
+
   }
+
+
+  
+  ngOnInit(): void {
+    const id = this.route.snapshot.paramMap.get('id');
+    this.languageService.getLanguage(id).subscribe(j => this.language = j);
+
+  }
+
+
+    
+  
 }

@@ -2,6 +2,8 @@ export class CProgLanguages {
     constructor(private name?: string, private founded?: number, private founder?: string, private description?: string){
 
     }
+
+    
     getName(){
         return this.name;
     }
