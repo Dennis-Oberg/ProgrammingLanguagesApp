@@ -13,7 +13,6 @@ import { GuardService } from './services/guard-service.service';
 export class AppComponent implements OnInit {
   title = 'Programming Languages';
  
-
   isLoggedIn: boolean;
   loggedInUser: string;
   constructor(private authService: LoginService, private router: Router) { }
@@ -44,5 +43,4 @@ export class AppComponent implements OnInit {
     document.getElementById("hiddenLogin").style.display = "none";
   }
 }
-
 
