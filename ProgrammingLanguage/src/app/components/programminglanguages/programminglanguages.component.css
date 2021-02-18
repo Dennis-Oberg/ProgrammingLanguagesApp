@@ -46,3 +46,26 @@
 ul li {
     color: white;
 }
+
+.buttons {
+    background-color: #ffffff;
+    border-style: none;
+    border-radius: 6px;
+    size: 30px;
+}
+
+.buttons p {
+    font-family: 'Comfortaa', cursive;
+    font-size: 16px;
+}
+
+.buttons:hover {
+    cursor: pointer;
+    transition-duration: 0.3s;
+    background-color: rgb(255, 94, 94);
+    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
+}
+
+.buttons:hover p {
+    color: white;
+}

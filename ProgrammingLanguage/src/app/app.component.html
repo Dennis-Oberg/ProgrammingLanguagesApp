@@ -10,24 +10,15 @@
 
 <body>
     <div class="topnav">
-
         <a class="links" routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</a>
         <a class="links" routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming Languages</a>
 
         <div class="loginform">
-            <form action="">
-                <input type="text" placeholder="Username" name="Username" id="uid">
-                <input type="password" placeholder="Password" name="Password" id="pswd">
-                <input class="buttons" type="button" value="Login">
-            </form>
+            <button class="buttons" routerLink="/login-page"><p>Click here to login</p></button>
+            <button class="buttons" routerLink="/add-page"><p>Submit to database</p> </button>
         </div>
     </div>
-
     <router-outlet></router-outlet>
-
-
-
-
 </body>
 
 </html>

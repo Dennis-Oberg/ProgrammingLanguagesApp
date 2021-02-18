@@ -1,0 +1,18 @@
+<div class="WelcomeWrapper">
+    <div class="firstwelcomediv">
+        <div class="submitform">
+            <form [formGroup]="this.form">
+                <p>Name of the language:</p>
+                <input placeholder="Languagename" formControlName="Name" type="text" class="input-field " />
+                <p>Name of the founder:</p>
+                <input placeholder="founder" formControlName="Founder" type="text" class="input-field " />
+                <p>Year founded:</p>
+                <input placeholder="founded" formControlName="Founded" type="text" class="input-field " />
+                <p>Provide a short description of the language!</p>
+                <input placeholder="description" formControlName="Description" type="text" class="input-field " />
+
+            </form>
+            <button class="buttons" (click)="onSubmit()"><p>Submit</p> </button>
+        </div>
+    </div>
+</div>
