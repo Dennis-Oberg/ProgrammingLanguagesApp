@@ -36,7 +36,7 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
     AngularFirestoreModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
-      {path:'', redirectTo:'/Welcome-Page',pathMatch:'full'},
+      {path:'', redirectTo:'/Welcome-Page', pathMatch:'full'},
       {path:'Welcome-Page', component:WelcomepageComponent},
       {path:'Programming-Languages', component:ProgramminglanguagesComponent},
       {path:'details/:name', component:DetailsComponent},

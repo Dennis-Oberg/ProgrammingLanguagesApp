@@ -13,12 +13,36 @@
     
 }
 
-.WelcomeWrapper {
-    display: flex;
+.Wrapper {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgb(133, 143, 143) 0%, rgb(21, 158, 212) 100%);
+    background-size: cover;
+    background-position: center;
     justify-content: center;
+    grid-gap: 25px;
+    display: flex;
 }
 
-.WelcomeText {
+.DetailsDiv {
+    background-color: rgb(255, 94, 94);
+    padding: 25px;
+    margin: 50px;
+    width: 20%;
+    border-radius: 30px;
+    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    font-size: 24px;
+    color:white;
+    padding: 25px;
+}
+
+.ImgDiv {
     background-color: rgb(255, 94, 94);
     padding: 25px;
     width: 20%;
@@ -26,6 +50,8 @@
     box-shadow: 0 0 10px 8px rgb(2, 2, 2);
 }
 
-    ul li {
-    color:white;
+img {
+    max-width:100%;
+    max-height:100%;
 }
+

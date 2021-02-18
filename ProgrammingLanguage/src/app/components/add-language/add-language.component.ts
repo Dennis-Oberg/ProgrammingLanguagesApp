@@ -24,14 +24,31 @@ export class AddLanguageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
+
+  verifyDigits(input): boolean { //Kollar så att årinparameter bara innehåller siffror
+    let counter = 0;
+    for (var i = 0; i < input.length; i++) {
+        if (parseInt(input.charAt(i))) {
+            counter++;
+        }
+    }
+    return counter==input.length;
+}
+
+
   onSubmit(){
-    this.firestore.collection('Languages').add({
-      Name: this.form.value.Name,
-      Founder: this.form.value.Founder,
-      Founded: this.form.value.Founded,
-      Description: this.form.value.Description
-      
-  })
+
+    if (this.verifyDigits(this.form.value.Founded))
+    {
+      this.firestore.collection('Languages').add({
+        Name: this.form.value.Name,
+        Founder: this.form.value.Founder,
+        Founded: this.form.value.Founded,
+        Description: this.form.value.Description
+        
+    })
+     
   .then(res => {
       console.log(res);
       this.form.reset();
@@ -40,6 +57,5 @@ export class AddLanguageComponent implements OnInit {
       console.log(e);
   })
   }
-
-
+}
 }

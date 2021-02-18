@@ -1,26 +1,15 @@
-<div class="login_form">
-    <h2>Please login</h2>
 
-    <div class="loginform">
-
-        <form (submit)="onSubmit()">
-            <label>E-mail: <br></label><input type="email" ngModel="email" name="email" required />
-            <label>Password: <br></label><input type="password" ngModel="password" name="password" />
-
-            <input type="submit" value="Login" /><br/>
-            <span *ngIf="error">{{ error }}</span>
-        </form>
-    </div>
-
-</div>
-
-<div class="login_form">
-    <h1>Login</h1>
-    <form (submit)="onSubmit()">
-        <ul id="login_list">
-            <li><input type="text" placeholder="Email" name="email" class="txt" required ngModel="email"></li>
-            <li><input type="password" placeholder="Password" name="password"></li>
-            <input type="submit" value="Login" /><br/>
-        </ul>
+<div class="form-popup" id="hiddenLogin">
+    <form class="form-container">
+    
+      <label for="email"><b>Email</b></label>
+      <h1>{{ email }}</h1>
+      <input type="text" placeholder="Enter Email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" required>
+  
+      <button type="submit" (click)="onSubmit()" class="btn">Login</button>
+      <button type="button" class="btn cancel" (click)="closeForm()">Close</button>
     </form>
-</div>
+  </div>

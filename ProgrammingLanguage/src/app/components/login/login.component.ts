@@ -12,24 +12,37 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
   error: string;
+  isLoggedIn: boolean;
+  loggedInUser: string;
+
   constructor(private authService: LoginService, private router: Router) { }
 
-  ngOnInit(): void {
-    this.authService.getAuth().subscribe( auth => {
-      if(auth) {
+  ngOnInit() {
+    this.authService.getAuth().subscribe(auth => {
+      if (auth) {
         this.router.navigate(['/']);
       }
     });
   }
+
+
   onSubmit() {
     this.authService.login(this.email, this.password)
-    .then(res => {
-    this.router.navigate(['/']);
-    
-    })
-    .catch(err => {
-    this.error = err;
-    });
-    }
+      .then(res => {
+        this.router.navigate(['/']);
+      })
+      .catch(err => {
+        this.error = err;
+      });
+  }
+
+
+  openForm() {
+    document.getElementById("hiddenLogin").style.display = "block";
+  }
+
+  closeForm() {
+    document.getElementById("hiddenLogin").style.display = "none";
+  }
 
 }

@@ -16,7 +16,6 @@ body {
     background-color: black;
     border-radius: 6px;
     overflow: hidden;
-    height: 80px;
 }
 
 .links {
@@ -83,3 +82,4 @@ body {
     margin: 30px;
     color: white;
 }
+
