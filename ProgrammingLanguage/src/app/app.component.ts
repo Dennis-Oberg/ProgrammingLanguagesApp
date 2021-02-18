@@ -11,6 +11,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit {
   title = 'Programming Languages';
+ 
+
   isLoggedIn: boolean;
   loggedInUser: string;
   constructor(private authService: LoginService, private router: Router) { }
@@ -20,7 +22,6 @@ export class AppComponent implements OnInit {
       if (auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
-        console.log("test2");
       } else {
         this.isLoggedIn = false;
       }
@@ -36,8 +37,9 @@ export class AppComponent implements OnInit {
     document.getElementById("hiddenLogin").style.display = "block";
   }
 
+
   closeForm() {
     document.getElementById("hiddenLogin").style.display = "none";
   }
 
-}
+
