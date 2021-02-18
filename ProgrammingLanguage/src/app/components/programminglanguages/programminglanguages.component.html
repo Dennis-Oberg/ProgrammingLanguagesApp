@@ -9,7 +9,7 @@
         <div class="WelcomeText">
             <ul>
                 <li *ngFor="let language of proglanguages">
-                    <a [routerLink]="['/details', language.id]" (click)="verifyUser()" routerLinkActive="active-link">{{ language.Name }}</a>
+                    <a [routerLink]="['/details', language.id]" (click)="verifyUser()" routerLinkActive="active-link"><p>{{ language.Name }}</p></a>
                 </li>
             </ul>
         </div>
