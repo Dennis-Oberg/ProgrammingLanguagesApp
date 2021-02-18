@@ -16,6 +16,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
+import { GuardService } from './services/guard-service.service';
 
 
 @NgModule({
@@ -40,9 +41,9 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
       {path:'', redirectTo:'/Welcome-Page', pathMatch:'full'},
       {path:'Welcome-Page', component:WelcomepageComponent},
       {path:'Programming-Languages', component:ProgramminglanguagesComponent},
-      {path:'details/:name', component:DetailsComponent},
+      {path:'details/:id', component:DetailsComponent,  canActivate:[GuardService] },
       {path:'Login', component:LoginComponent},
-      {path:'Database-Submit', component:AddLanguageComponent}
+      {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]}
     ])
   ],
   providers: [],

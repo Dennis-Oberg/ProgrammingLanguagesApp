@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
+import { GuardService } from './services/guard-service.service';
 
 
 @Component({
@@ -28,6 +29,7 @@ export class AppComponent implements OnInit {
     });
   }
 
+
   onLogoutClick() {
     this.authService.logOut();
   }
@@ -41,5 +43,6 @@ export class AppComponent implements OnInit {
   closeForm() {
     document.getElementById("hiddenLogin").style.display = "none";
   }
+}
 
 
