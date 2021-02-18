@@ -16,11 +16,15 @@
                 Languages</a>
             <div class="loginform_wrapper">
                 <div class="loginform">
-                    <div *ngIf="isLoggedIn"><a href="#" (click)="onLogoutClick()">Logout: {{ loggedInUser }}</a></div>
+                    <div class="loginDiv" *ngIf="isLoggedIn">Logged in as: {{ loggedInUser }}
+                        <button (click)="onLogoutClick()">Logout</button>
+
+                    </div>
+                    
                     <button (click)="openForm()" class="buttons">
                         <p>Click here to login</p>
                     </button>
-                    <button class="buttons" routerLink="/Database-Submit">
+                    <button *ngIf="isLoggedIn" class="buttons" routerLink="/Database-Submit">
                         <p>Submit to database</p>
                     </button>
                     

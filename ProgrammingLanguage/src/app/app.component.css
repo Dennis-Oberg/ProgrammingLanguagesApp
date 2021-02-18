@@ -83,3 +83,12 @@ body {
     color: white;
 }
 
+.loginDiv {
+    background-color: white;
+    padding:25px;
+    
+}
+
+.loginDiv a {
+    color: rgb(255, 94, 94);
+}
