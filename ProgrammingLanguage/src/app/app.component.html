@@ -9,19 +9,24 @@
 </head>
 
 <body>
+
     <div class="topwrapper">
         <div class="topnav">
             <a class="links" routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</a>
             <a class="links" routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming Languages</a>
             <div class="loginform_wrapper">
                 <div class="loginform">
-                    <button class="buttons" routerLink="/Login"><p>Click here to login</p></button>
+                    <button class="buttons" (click)="openForm()"><p>Click here to login</p></button>
+
                     <button class="buttons" routerLink="/Database-Submit"><p>Submit to database</p> </button>
                 </div>
-
+            </div>
+            <div *ngIf="loginFormShow">
+                <app-add-language></app-add-language>
             </div>
         </div>
     </div>
+
     <router-outlet></router-outlet>
 </body>
 

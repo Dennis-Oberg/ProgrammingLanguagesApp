@@ -9,6 +9,10 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
 export class AppComponent {
   isLoggedIn = true;
   title = 'Programming Languages';
+  loginFormShow = false;
 
 
+  openForm(){
+this.loginFormShow = !this.loginFormShow;
+  }
 }

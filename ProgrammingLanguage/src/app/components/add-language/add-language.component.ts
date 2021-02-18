@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder } from "@Angular/forms";
+import { FormControl, FormGroup, FormBuilder, Validators } from "@Angular/forms";
 import { AngularFirestore } from "@angular/fire/firestore";
 
 
@@ -24,6 +24,7 @@ export class AddLanguageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  
   onSubmit(){
     this.firestore.collection('Languages').add({
       Name: this.form.value.Name,
