@@ -3,20 +3,15 @@
         <h1 class="title">
             Select a programming language!
         </h1>
+
     </div>
     <div class="WelcomeWrapper">
         <div class="WelcomeText">
             <ul>
-                <li *ngFor="let item of proglanguages">
-                    <a [routerLink]="['/details', item.id]"
-                    routerLinkActive="active-link"
-                    *ngFor="let item of proglanguages">{{ item.Name }}</a>
+                <li *ngFor="let language of proglanguages">
+                    <a [routerLink]="['/details', language.id]" (click)="verifyUser()" routerLinkActive="active-link"><p>{{ language.Name }}</p></a>
                 </li>
             </ul>
         </div>
-
-         
-   
-
     </div>
-    < </body>
+</body>
