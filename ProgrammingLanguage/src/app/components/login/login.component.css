@@ -42,6 +42,7 @@
     width: 100%;
     margin-bottom: 10px;
     opacity: 0.8;
+    border-radius: 6px;
 }
 
 .form-container .cancel {
@@ -51,4 +52,5 @@
 .form-container .btn:hover,
 .open-button:hover {
     opacity: 1;
+    border-radius: 10px;
 }
