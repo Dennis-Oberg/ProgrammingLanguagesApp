@@ -16,7 +16,8 @@ a {
     color: rgb(80, 145, 74);
 }
 
+html,
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    height: 100%;
 }
