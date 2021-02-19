@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
+import { MatInputModule } from '@angular/material/input';
 
 
  
@@ -17,6 +18,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { GuardService } from './services/guard-service.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -37,6 +39,7 @@ import { GuardService } from './services/guard-service.service';
     AngularFirestoreModule,
     ReactiveFormsModule,
     FormsModule,
+    MatInputModule,
     RouterModule.forRoot([
       {path:'', redirectTo:'/Welcome-Page', pathMatch:'full'},
       {path:'Welcome-Page', component:WelcomepageComponent},
@@ -44,7 +47,8 @@ import { GuardService } from './services/guard-service.service';
       {path:'details/:id', component:DetailsComponent,  canActivate:[GuardService] },
       {path:'Login', component:LoginComponent},
       {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
