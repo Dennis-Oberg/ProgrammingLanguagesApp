@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
 
 
- 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component'
@@ -18,10 +18,14 @@ import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { GuardService } from './services/guard-service.service';
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button'
 
+>>>>>>> Stashed changes
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 >>>>>>> Stashed changes
 
 
@@ -50,7 +54,8 @@ import {MatButtonModule} from '@angular/material/button'
       {path:'details/:id', component:DetailsComponent,  canActivate:[GuardService] },
       {path:'Login', component:LoginComponent},
       {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]}
-    ])
+    ]),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
