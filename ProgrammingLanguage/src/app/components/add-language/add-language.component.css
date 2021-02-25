@@ -17,6 +17,15 @@
     width: 20%;
     border-radius: 30px;
     align-items: center;
+    height: 492px;
+    display: flex;
+    justify-content: center;
+}
+
+.mat-form-field {
+    display: block;
+    text-align: center;
+    margin: 10px;
 }
 
 .insertlang {
@@ -39,12 +48,13 @@ form p {
 }
 
 .submitform {
-    display: grid;
+    display: flex;
     margin: 6px;
     text-align: center;
+    height: auto;
 }
 
-.buttons {
+button {
     background-color: rgb(255, 255, 255);
     border-style: none;
     border-radius: 3px;
@@ -55,18 +65,18 @@ form p {
     margin-right: auto;
 }
 
-.buttons p {
+button {
     font-family: 'Comfortaa', cursive;
     font-size: 16px;
 }
 
-.buttons:hover {
+button:hover {
     cursor: pointer;
     transition-duration: 0.6s;
     background-color: rgb(255, 94, 94);
 }
 
-.buttons:hover p {
+button:hover p {
     color: white;
 }
 
@@ -78,9 +88,4 @@ input[type=text] {
     border-radius: 4px;
     border-color: transparent;
     -webkit-appearance: none
-}
-
-input[type=text]:focus {
-    width: 70%;
-    transition-duration: 0.6s;
 }

@@ -17,6 +17,12 @@ import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { GuardService } from './services/guard-service.service';
+<<<<<<< Updated upstream
+=======
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button'
+
+>>>>>>> Stashed changes
 
 
 @NgModule({
@@ -29,9 +35,9 @@ import { GuardService } from './services/guard-service.service';
     AddLanguageComponent,
   ],
   imports: [
-    
     BrowserModule,
     AppRoutingModule,
+    MatButtonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,

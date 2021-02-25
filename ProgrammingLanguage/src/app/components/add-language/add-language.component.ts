@@ -17,10 +17,9 @@ export class AddLanguageComponent implements OnInit {
 
 
   form = new FormGroup({
-    
-    Name: new FormControl(),
+    Name: new FormControl('',[Validators.required]),
     Founder:  new FormControl(), 
-    Founded: new FormControl(),
+    Founded: new FormControl('',[Validators.minLength(4)]),
     Description: new FormControl()
 });
 
