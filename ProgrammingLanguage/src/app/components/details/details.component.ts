@@ -27,7 +27,10 @@ export class DetailsComponent implements OnInit {
 
   }
 
-
+  goBack()
+  {
+    window.history.back();
+  }
     
   
 }

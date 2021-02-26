@@ -5,110 +5,54 @@
         font-family: 'Comfortaa', cursive;
         background-color: rgb(7, 18, 26);
     }
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    
-    .topnav {
+
+    .topwrapper {
         background-color: black;
-        border-radius: 6px;
         overflow: hidden;
-    }
-    
-    .links {
-        color: white;
-        text-decoration: none;
-        padding: 10px;
-        margin: 12px;
-        float: left;
-        font-size: 20px;
-        display: block;
-        border-radius: 6px;
-    }
-    
-    .activebutton {
-        border: 2px solid rgba(255, 94, 94, 1);
-        background-color: rgba(255, 94, 94, 1);
-        color: white;
-    }
-    
-    .topnav .activebutton:hover {
-        color: white;
-        border-radius: 28px;
-    }
-    
-    .links:hover {
-        color: rgba(255, 94, 94, 1);
-        transition-duration: 0.2s;
-    }
-    
-    .topnav .loginform {
-        float: right;
-        padding: 20px;
-    }
-    
-    .loginform p {
-        font-size: 16px;
-    }
-    
-    .buttons {
-        background-color: #ffffff;
-        border-style: none;
-        border-radius: 6px;
-        width: 200px;
-        height: 40px;
-    }
-    
-    .buttons p {
-        font-family: 'Comfortaa', cursive;
-        font-size: 16px;
-    }
-    
-    .buttons:hover {
-        cursor: pointer;
-        transition-duration: 0.6s;
-        background-color: rgb(255, 94, 94);
-    }
-    
-    .buttons:hover p {
-        color: white;
-    }
-    
-    .maindiv {
-        color: green;
-        border-radius: 2px solid;
-    }
-    
-    .title {
-        margin: 30px;
-        color: white;
-    }
-    
-    .loginDiv {
-        background-color: white;
-        float: left;
-        height: 40px;
-        align-items: center;
         display: flex;
-        border-radius: 6px;
-        margin-right: 4px;
-        padding-left: 4px;
-        padding-right: 4px;
+        align-items: center;
+        justify-content: space-between;
     }
-    
-    .loginDiv a {
-        color: rgb(255, 94, 94);
+
+    .loginform {
+        display: flex;
+        align-items: center;
     }
-    
-    .logincenter {
+
+    .loginDiv {
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    .loggedInAs {
+        font-size: 16px;
+        color: white;
+    }
+
+    .title {
+        margin-top: 30px;
+        color: white;
+    }
+
+    app-login {
         position: absolute;
         width: 600px;
         height: 200px;
-        z-index: 15;
         top: 50%;
         left: 50%;
         margin: -250px 0 0 -300px;
+    }
+
+    .mat-button {
+        background: rgb(255, 255, 255);
+        margin: 10px;
+    }
+
+    .mat-icon {
+        margin-left:20px;
+    }
+
+    .mat-icon:hover {
+        cursor: pointer;
     }
