@@ -32,6 +32,7 @@ export class AppComponent implements OnInit {
       if (auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
+        
       } else {
         this.isLoggedIn = false;
       }

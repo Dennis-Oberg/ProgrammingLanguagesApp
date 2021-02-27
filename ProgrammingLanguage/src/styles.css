@@ -13,7 +13,13 @@ mat-card-footer {
     padding-left: 25px;
 }
 
-.mat-body p, .mat-body-1 p, .mat-typography p {
+.mat-grid-list {
+    height: 100%;
+}
+
+.mat-body p,
+.mat-body-1 p,
+.mat-typography p {
     margin: 0;
 }
 
@@ -24,7 +30,10 @@ a {
 
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-grid-tile {
+    font-size: 30px;
+    color: white;
+    font-family: 'Bungee', cursive;
+}

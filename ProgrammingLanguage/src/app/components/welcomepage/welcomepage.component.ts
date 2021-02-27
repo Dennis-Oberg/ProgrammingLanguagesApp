@@ -20,7 +20,7 @@ export class WelcomepageComponent implements OnInit {
       if(auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
-        console.log(this.isLoggedIn);
+        
         
       } else {
         this.isLoggedIn = false;

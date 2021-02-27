@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoginService } from 'src/app/services/login.service';
 import { Observable } from 'rxjs';
 import { AppComponent } from 'src/app/app.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -10,17 +11,29 @@ import { AppComponent } from 'src/app/app.component';
 })
 export class ProfileComponent implements OnInit {
 
- 
-
-  constructor(private test: AppComponent) {
-
+  
+  isLoggedIn: boolean;
+  loggedInUser: String;
+    constructor(private authService: LoginService, private app: AppComponent,  private router: Router) {
+   
     
    }
 
   ngOnInit(): void {
+   
     
+      this.authService.getAuth().subscribe(auth => {
+        if (auth) {
+          this.isLoggedIn = true;
+          this.loggedInUser = auth.email;
+          
+        } else {
+          this.isLoggedIn = false;
+        }
+      });
     
     
   }
 
 }
+

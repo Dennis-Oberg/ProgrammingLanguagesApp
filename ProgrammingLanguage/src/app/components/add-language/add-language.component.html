@@ -1,23 +1,26 @@
-<div class="insertlang">
-    <h1 class="title">
-        Databas submission
-    </h1>
-</div>
-<div class="WelcomeWrapper">
-    <div class="firstwelcomediv">
-        <div class="submitform">
-            <form class="form" [formGroup]="this.form">
-                <p>Name of the language:</p>
-                <input placeholder="Languagename" formControlName="Name" type="text" class="input-field " />
-                <p>Name of the founder:</p>
-                <input placeholder="founder" formControlName="Founder" type="text" class="input-field " />
-                <p>Year founded:</p>
-                <input placeholder="founded" formControlName="Founded" type="text" class="input-field " />
-                <p>Provide a short description of the language!</p>
-                <input placeholder="description" formControlName="Description" type="text" class="input-field " />
+<mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
 
-            </form>
-            <button class="buttons" (click)="onSubmit()"><p>Submit</p> </button>
-        </div>
-    </div>
-</div>
+        Database submission
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="6">
+        <mat-card class="progCard">
+
+            <mat-card-content>
+                <form class="form" [formGroup]="this.form">
+                    <p>Name of the language:</p>
+                    <input placeholder="Languagename" formControlName="Name" type="text" class="input-field " />
+                    <p>Name of the founder:</p>
+                    <input placeholder="founder" formControlName="Founder" type="text" class="input-field " />
+                    <p>Year founded:</p>
+                    <input placeholder="founded" formControlName="Founded" type="text" class="input-field " />
+                    <p>Provide a short description of the language!</p>
+                    <input placeholder="description" formControlName="Description" type="text" class="input-field " />
+
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="onSubmit()" mat-button>Submit</button>
+
+            </mat-card-actions>
+        </mat-card>

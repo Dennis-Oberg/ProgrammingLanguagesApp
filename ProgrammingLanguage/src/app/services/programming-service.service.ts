@@ -25,6 +25,9 @@ export class ProgrammingServiceService {
     ))
   );      
 }
+remove(id: string): void {
+  this.afs.doc('Languages/' + id).delete();
+}
 
 getPlayer(): Observable<CProgLanguages[]> {
   return this.languages;

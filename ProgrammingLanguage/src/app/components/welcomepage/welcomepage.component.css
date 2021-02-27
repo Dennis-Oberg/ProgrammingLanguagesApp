@@ -1,95 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
-.WelcomeWrapper {
-    background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
-    background-size: cover;
-    background-position: center;
-    align-items: center;
-    margin-top: 100px;
-    display: grid;
-    grid-template-columns: 25% 25%;
-    justify-content: space-evenly;
-}
-
-.firstwelcomediv {
-    font-family: 'Comfortaa', cursive;
-    background-color: rgb(255, 94, 94);
-    border-radius: 30px;
-    padding: 25px;
-    height: 435px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 400px;
-    border-radius: 30px;
-    height: 435px;
-    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
-    align-items: center;
-}
-
-.secondwelcomediv {
-    font-family: 'Comfortaa', cursive;
-    background-color: rgb(255, 94, 94);
-    padding: 25px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border-radius: 30px;
-    padding: 25px;
-    height: 435px;
-    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
-    width: 400px;
-    overflow-y: scroll;
-}
-
-.secondwelcomediv::-webkit-scrollbar {
-    display: none;
-}
-
-.textDiv {
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: left;
-    font-size: 24px;
-}
-
-.homepagetitle h1 {
-    font-family: 'Bungee', cursive;
-    color: White;
-    font-size: 36px;
-    height: 30px;
-    margin: revert;
-}
-
-.homepagetitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttons {
-    background-color: rgb(255, 255, 255);
-    border-style: none;
-    border-radius: 6px;
-    width: 200px;
-    height: 50px;
-}
-
-.buttons:hover {
-    cursor: pointer;
-    transition-duration: 0.6s;
-    background-color: rgb(110, 77, 77);
-}
-
-.buttons:hover p {
-    color: white;
-}
-
-.mat-grid-tile {
-    font-size: 30px;
-    color: white;
-}
-
 .mat-grid-tile:last-of-type {
     background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
     background-position: center;
@@ -98,11 +8,12 @@
 
 .progCard {
     background-color: rgb(255, 94, 94);
-    box-shadow: 0 0 2px 0px rgb(2, 2, 2);
+    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
     max-width: 500px;
-    min-height:50%;
+    min-height: 50%;
     padding: 50px;
     margin: 100px;
+    font-family: 'Comfortaa', cursive;
 }
 
 .mat-card-content p {
@@ -113,12 +24,17 @@
 .mat-button {
     background-color: white;
     color: black;
+    font-family: 'Comfortaa', cursive;
 }
 
-.mat-card-actions, .mat-card-content h2 {
+.mat-card-actions,
+.mat-card-content h2 {
     margin: 0 16px;
+    font-family: 'Comfortaa', cursive;
 }
 
 #secondCard {
     visibility: hidden;
+    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
+    border-radius: 10px;
 }

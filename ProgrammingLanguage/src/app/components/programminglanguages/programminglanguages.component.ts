@@ -31,6 +31,9 @@ export class ProgramminglanguagesComponent implements OnInit {
 
   displayedColumns: string[] = ['ProgrammingLanguages'];
  
+  removeFromDB(){
+    
+  }
 
   verifyUser() {
     if (!(this.isLoggedIn)) //Error message if non-logged in user tries to visit details for each language
