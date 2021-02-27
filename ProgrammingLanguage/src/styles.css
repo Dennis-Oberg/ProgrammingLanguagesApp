@@ -1,14 +1,26 @@
-footer {
+mat-card-footer {
     font-family: 'Bungee', cursive;
     font-size: 20px;
     color: rgba(255, 94, 94, 1);
     position: absolute;
     background-color: black;
     width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
 }
 
-footer p {
-    padding-left: 30px;
+.footerText {
+    padding-left: 25px;
+}
+
+.mat-grid-list {
+    height: 100%;
+}
+
+.mat-body p,
+.mat-body-1 p,
+.mat-typography p {
+    margin: 0;
 }
 
 a {
@@ -18,11 +30,12 @@ a {
 
 body {
     margin: 0;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
+}
+
+.mat-grid-tile {
+    font-size: 30px;
+    color: white;
+    font-family: 'Bungee', cursive;
+
 }

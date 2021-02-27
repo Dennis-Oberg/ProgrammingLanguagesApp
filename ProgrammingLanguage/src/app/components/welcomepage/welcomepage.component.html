@@ -1,4 +1,5 @@
 <body>
+    <!--
     <div class="homepagetitle">
         <h1 class="title">
             Home
@@ -7,13 +8,57 @@
     <div class="WelcomeWrapper">
         <div class="firstwelcomediv">
 
-            <h1>There are alot of programming languages and there are alot of history behind it all! <br><br> Press the button below to recieve some nice reading!</h1>
-            <button (click)="toggleShow()" class="buttons"><p>Show History</p></button>
+            <h1>There are alot of programming languages and there are alot of history behind it all! <br><br> Press the
+                button below to recieve some nice reading!</h1>
+            <button (click)="toggleShow()" class="buttons">
+                <p>Show History</p>
+            </button>
         </div>
         <div *ngIf="isShown" class="secondwelcomediv">
-            <h2>Ever since the invention of Charles Babbage’s difference engine in 1822, computers have required a means of instructing them to perform a specific task. This means is known as a programming language. Computer languages were first composed
-                of a series of steps to wire a particular program; these morphed into a series of steps keyed into the computer and then executed; later these languages acquired advanced features such as logical branching and object orientation. The computer
-                languages of the last fifty years have come in two stages, the first major languages and the second major languages, which are in use today. <br> <em><h2 *ngIf="!isLoggedIn">To see more details, you have to log in!</h2></em> </h2>
+            <h2>Ever since the invention of Charles Babbage’s difference engine in 1822, computers have required a means
+                of instructing them to perform a specific task. This means is known as a programming language. Computer
+                languages were first composed
+                of a series of steps to wire a particular program; these morphed into a series of steps keyed into the
+                computer and then executed; later these languages acquired advanced features such as logical branching
+                and object orientation. The computer
+                languages of the last fifty years have come in two stages, the first major languages and the second
+                major languages, which are in use today. <br> <em>
+                    <h2 *ngIf="!isLoggedIn">To see more details, you have to log in!</h2>
+                </em> </h2>
         </div>
-    </div>
+    </div>-->
+
+    <mat-grid-list cols="1" rowHeight="100px">
+        <mat-grid-tile [colspan]="1" [rowspan]="2">Home</mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="6">
+            <mat-card class="progCard">
+                <mat-card-header>
+                    <mat-card-title>There are alot of programming languages and there are alot of history behind it all! </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        Press the button below to recieve some nice reading!
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button (click)="toggleShow()" mat-button>Show History</button>
+                </mat-card-actions>
+            </mat-card>
+
+            <mat-card id="secondCard" class="progCard">
+                <mat-card-header>
+                    <mat-card-title>History</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <p>
+                        Ever since the invention of Charles Babbage’s difference engine in 1822, computers have required a means of instructing them to perform a specific task. This means is known as a programming language. Computer languages were first composed of a series
+                        of steps to wire a particular program; these morphed into a series of steps keyed into the computer and then executed; later these languages acquired advanced features such as logical branching and object orientation. The computer
+                        languages of the last fifty years have come in two stages, the first major languages and the second major languages, which are in use today.
+                    </p>
+                    <h2 *ngIf="!isLoggedIn">To see more details, you have to log in!
+                    </h2>
+                </mat-card-content>
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
 </body>

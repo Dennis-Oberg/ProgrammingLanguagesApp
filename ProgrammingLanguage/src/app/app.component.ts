@@ -3,9 +3,11 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 import { GuardService } from './services/guard-service.service';
-import { RouterOutlet} from '@angular/router';
-import {  HostBinding } from '@angular/core';
-import {  trigger, state, style, animate, transition } from '@angular/animations';
+
+import { DomSanitizer } from '@angular/platform-browser';
+import { MatIconRegistry } from '@angular/material/icon';
+
+
 
 
 @Component({
@@ -19,13 +21,21 @@ export class AppComponent implements OnInit {
  
   isLoggedIn: boolean;
   loggedInUser: string;
-  constructor(private authService: LoginService, private router: Router) { }
+  
+
+  constructor(private authService: LoginService, private router: Router, private iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
+
+    
+    iconRegistry.addSvgIcon('profile', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/user.svg'));
+
+   }
   
   ngOnInit() {
     this.authService.getAuth().subscribe(auth => {
       if (auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
+        
       } else {
         this.isLoggedIn = false;
       }
@@ -39,7 +49,7 @@ export class AppComponent implements OnInit {
     
 
   openForm() {
-    document.getElementById("hiddenLogin").style.display = "block";
+    document.getElementById("hiddenLogin").style.display = "block";   
   }
 
 

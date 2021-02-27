@@ -1,4 +1,4 @@
-<body>
+<!--<body>
     <div class="proglangtitle">
         <h1>Details</h1>
     </div>
@@ -12,4 +12,34 @@
             </ul>
         </div>
     </div>
+</body>
+-->
+
+<body>
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile [colspan]="4" [rowspan]="2">Home</mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="6">
+            <mat-card class="progCard">
+                <mat-card-header>
+                    <mat-card-title>
+                        Details
+                    </mat-card-title>
+                </mat-card-header>
+                <mat-card-content>
+                    <mat-list *ngIf="language">
+                        <mat-list-item class="test"> Name: {{ language.Name }} </mat-list-item>
+                        <mat-list-item class="test"> Founder: {{ language.Founder }} </mat-list-item>
+                        <mat-list-item class="test"> Founded: {{ language.Founded }} </mat-list-item>
+                        <mat-list-item class="test"> Description: {{ language.Description }} </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button (click)="goBack()" mat-button>Back</button>
+                    <button (click)="remove()" mat-button>Remove from database</button>
+                </mat-card-actions>
+            </mat-card>
+
+
+        </mat-grid-tile>
+    </mat-grid-list>
 </body>

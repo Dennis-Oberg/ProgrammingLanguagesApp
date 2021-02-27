@@ -1,17 +1,38 @@
 <body>
-    <div class="proglangtitle">
-        <h1 class="title">
-            Select a programming language!
-        </h1>
+    <mat-grid-list cols="4" rowHeight="100px">
+        <mat-grid-tile [colspan]="4" [rowspan]="2">Programming Languages</mat-grid-tile>
+        <mat-grid-tile [colspan]="4" [rowspan]="6">
+            <mat-card class="progCard">
+                <mat-card-header>
+                    <mat-card-title>Select a programming language! </mat-card-title>
+                    <mat-form-field>
+                        <mat-label>Filter</mat-label>
+                        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Java" #input>
+                    </mat-form-field>
+                    <button mat-menu-item *ngIf="isLoggedIn" routerLink="/Database-Submit" routerLinkActive="activebutton">Submit to database</button>
+                </mat-card-header>
+                <mat-card-content>
 
-    </div>
-    <div class="WelcomeWrapper">
-        <div class="WelcomeText">
-            <ul>
-                <li *ngFor="let language of proglanguages">
-                    <a [routerLink]="['/details', language.id]" (click)="verifyUser()" routerLinkActive="active-link"><p>{{ language.Name }}</p></a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+                    <table mat-table [dataSource]="dataSource">
+                        <ng-container matColumnDef="ProgrammingLanguages">
+                            <th mat-header-cell *matHeaderCellDef> Name </th>
+                            <td mat-cell *matCellDef="let language" [routerLink]="['/details', language.id]" (click)="verifyUser()" routerLinkActive="active-link">
+                                {{ language.Name }}
+                            </td>
+                        </ng-container>
+
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                        <tr class="mat-row" *matNoDataRow>
+                            <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                        </tr>
+
+                    </table>
+                </mat-card-content>
+
+            </mat-card>
+        </mat-grid-tile>
+    </mat-grid-list>
 </body>

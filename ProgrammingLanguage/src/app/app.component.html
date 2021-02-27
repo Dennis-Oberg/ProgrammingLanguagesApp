@@ -10,36 +10,27 @@
 
 
 <body id="body">
-
     <div class="topwrapper">
         <div class="topnav">
-            <a class="links" routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</a>
-            <a class="links" routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming
-                Languages</a>
-            <a class="links" *ngIf="isLoggedIn" routerLinkActive="activebutton" routerLink="/Database-Submit">
-                <p>Submit to database</p>
-            </a>
-            <div class="loginform_wrapper">
-                <div class="loginform">
-                    <div class="loginDiv" *ngIf="isLoggedIn">
-                        <p>Logged in as: {{ loggedInUser }}</p>
-                    </div>
-
-                    <button class="buttons">
-                        <p *ngIf="!isLoggedIn" (click)="openForm()">Login</p>
-                        <p *ngIf="isLoggedIn"  (click)="onLogoutClick()">logout</p>
-                    </button>
-
-                    <div class="logincenter">
-                        <app-login></app-login>
-                    </div>
-
-                </div>
-
-            </div>
+            <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</button>
+                <button mat-menu-item routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming Languages</button>
+                <button mat-menu-item *ngIf="isLoggedIn" routerLink="/Database-Submit" routerLinkActive="activebutton">Submit to database</button>
+            </mat-menu>
+        </div>
+            <div class="loginform">
+                 <div class="loginDiv" *ngIf="isLoggedIn">
+                     <p class="loggedInAs">Logged in as: {{ loggedInUser }}</p>
+                     <mat-icon routerLink="/Profile" routerLinkActive="activebutton" svgIcon="profile" aria-hidden="false" aria-label="Profile page SVG icon"></mat-icon>
+                 </div>
+                <button mat-button>
+                    <p *ngIf="!isLoggedIn" (click)="openForm()">Login</p>
+                    <p *ngIf="isLoggedIn" (click)="onLogoutClick()">logout</p>
+                </button>       
+            <app-login id="hiddenlogin"></app-login>
         </div>
     </div>
-
     <router-outlet></router-outlet>
 </body>
 

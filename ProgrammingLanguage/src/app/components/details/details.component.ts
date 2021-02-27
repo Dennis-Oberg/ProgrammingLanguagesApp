@@ -14,20 +14,25 @@ export class DetailsComponent implements OnInit {
 
   language: CProgLanguages;
 
-
+  id = this.route.snapshot.paramMap.get('id');
   constructor(private route: ActivatedRoute, private languageService: ProgrammingServiceService) { 
 
   }
 
-
-  
+  remove(){
+    this.languageService.remove(this.id);
+  }
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    this.languageService.getLanguage(id).subscribe(j => this.language = j);
+    
+    this.languageService.getLanguage(this.id).subscribe(j => this.language = j);
 
+   
   }
 
-
+  goBack()
+  {
+    window.history.back();
+  }
     
   
 }

@@ -1,33 +1,28 @@
-<div class="insertlang">
-    <h1 class="title">
-        Databas submission
-    </h1>
-</div>
-<div class="WelcomeWrapper">
-    <div class="firstwelcomediv">
-        <div class="submitform">
-            <form class="form" [formGroup]="this.form">
-                <mat-form-field class="input-field">
-                    <mat-label>Name of the language:</mat-label>
-                    <input matInput formControlName="Name">
-                </mat-form-field>
 
-                <mat-form-field class="input-field">
-                    <mat-label>Name of the founder:</mat-label>
-                    <input matInput formControlName="Founder">
-                </mat-form-field>
+<mat-grid-list cols="1" rowHeight="100px">
+    <mat-grid-tile [colspan]="1" [rowspan]="2">
 
-                <mat-form-field class="input-field">
-                    <mat-label>Year founded:</mat-label>
-                    <input matInput formControlName="Founded">
-                </mat-form-field>
+        Database submission
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="6">
+        <mat-card class="progCard">
 
-                <mat-form-field class="input-field">
-                    <mat-label>Description</mat-label>
-                    <textarea matInput formControlName="Description"></textarea>
-                </mat-form-field>
-                <button mat-raised-button (click)="onSubmit()">Submit</button>
-            </form>
-        </div>
-    </div>
-</div>
+            <mat-card-content>
+                <form class="form" [formGroup]="this.form">
+                    <p>Name of the language:</p>
+                    <input placeholder="Languagename" formControlName="Name" type="text" class="input-field " />
+                    <p>Name of the founder:</p>
+                    <input placeholder="founder" formControlName="Founder" type="text" class="input-field " />
+                    <p>Year founded:</p>
+                    <input placeholder="founded" formControlName="Founded" type="text" class="input-field " />
+                    <p>Provide a short description of the language!</p>
+                    <input placeholder="description" formControlName="Description" type="text" class="input-field " />
+
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button (click)="onSubmit()" mat-button>Submit</button>
+
+            </mat-card-actions>
+        </mat-card>
+
