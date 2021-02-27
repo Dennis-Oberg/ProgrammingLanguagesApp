@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { transition, trigger, useAnimation } from '@angular/animations';
+import { transAnimation } from '../router-animation/route-animation';
+
 
 @Component({
   selector: 'app-login',

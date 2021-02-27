@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
 
 
- 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { WelcomepageComponent } from './components/welcomepage/welcomepage.component';
@@ -18,6 +18,7 @@ import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { GuardService } from './services/guard-service.service';
+
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -43,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
   ],
   imports: [
+
     MatMenuModule,
     MatListModule,
     MatFormFieldModule,
@@ -54,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     BrowserModule,
     AppRoutingModule,
+    MatButtonModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFirestoreModule,
@@ -66,8 +69,10 @@ import { HttpClientModule } from '@angular/common/http';
       {path:'Programming-Languages', component:ProgramminglanguagesComponent},
       {path:'details/:id', component:DetailsComponent,  canActivate:[GuardService] },
       {path:'Login', component:LoginComponent},
+
       {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]},
       {path:'Profile', component:ProfileComponent, canActivate:[GuardService]}
+
 
     ]),
     BrowserAnimationsModule

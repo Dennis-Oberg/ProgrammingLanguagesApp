@@ -3,15 +3,18 @@ import { AddLanguageComponent } from './components/add-language/add-language.com
 import { LoginService } from 'src/app/services/login.service';
 import { Router } from '@angular/router';
 import { GuardService } from './services/guard-service.service';
+
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material/icon';
+
 
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  
 })
 export class AppComponent implements OnInit {
   title = 'Programming Languages';

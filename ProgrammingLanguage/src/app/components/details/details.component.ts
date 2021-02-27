@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { ProgrammingServiceService } from '../../services/programming-service.service';
 import { CProgLanguages} from 'src/model/CProgLanguages';
-import { Observable } from 'rxjs';
+
 
 @Component({
 selector: 'app-details',

@@ -30,10 +30,12 @@ a {
 
 body {
     margin: 0;
+
 }
 
 .mat-grid-tile {
     font-size: 30px;
     color: white;
     font-family: 'Bungee', cursive;
+
 }
