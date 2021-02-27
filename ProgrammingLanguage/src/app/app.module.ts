@@ -17,6 +17,9 @@ import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { AddLanguageComponent } from './components/add-language/add-language.component';
 import { GuardService } from './services/guard-service.service';
+import { MatInputModule}  from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+
 
 
 @NgModule({
@@ -29,7 +32,8 @@ import { GuardService } from './services/guard-service.service';
     AddLanguageComponent,
   ],
   imports: [
-    
+    MatButtonModule,
+    MatInputModule,
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),

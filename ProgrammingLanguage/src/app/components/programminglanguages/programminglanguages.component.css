@@ -48,7 +48,7 @@ ul li p:hover {
     color: black;
 }
 
-.buttons {
+.mat-raised-button {
     background-color: #ffffff;
     border-style: none;
     border-radius: 6px;
