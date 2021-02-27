@@ -55,3 +55,31 @@ img {
     max-height:100%;
 }
 
+.mat-grid-tile {
+    font-size: 30px;
+    color: white;
+}
+
+.mat-grid-tile:last-of-type {
+    background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.progCard {
+    background-color: rgb(255, 94, 94);
+    box-shadow: 0 0 2px 0px rgb(2, 2, 2);
+    max-width: 500px;
+    min-height:50%;
+    padding: 50px;
+    margin: 100px;
+}
+
+.mat-button {
+    background-color: white;
+    color: black;
+}
+
+.mat-list-base .mat-list-item, .mat-list-base .mat-list-option {
+    height: auto;
+}

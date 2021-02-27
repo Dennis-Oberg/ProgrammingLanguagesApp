@@ -70,3 +70,41 @@ ul li p:hover {
 .buttons:hover p {
     color: white;
 }
+
+.mat-grid-tile {
+    font-size: 30px;
+    color: white;
+}
+
+.mat-grid-tile:last-of-type {
+    background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
+    background-position: center;
+    background-size: cover;
+}
+
+.progCard {
+    background-color: rgb(255, 94, 94);
+    box-shadow: 0 0 2px 0px rgb(2, 2, 2);
+    max-width: 500px;
+    min-height:50%;
+    padding: 50px;
+    margin: 100px;
+}
+
+.mat-card-content p {
+    font-size: 16px;
+    margin: 0 16px;
+}
+
+.mat-card-header, .mat-card-content {
+    margin: 0 16px;
+}
+
+table {
+    background-color:rgb(7, 18, 26);
+}
+
+td:hover {
+    background-color:rgb(26, 66, 96);
+    cursor: pointer;
+}

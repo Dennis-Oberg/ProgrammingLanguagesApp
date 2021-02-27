@@ -33,7 +33,18 @@ export class WelcomepageComponent implements OnInit {
   }
 
   toggleShow() {
-    this.isShown = ! this.isShown;
+    if (this.isShown)
+    {
+      document.getElementById("secondCard").style.visibility = "hidden";
+      
     }
+    else{
+      document.getElementById("secondCard").style.visibility = "visible";
+    }
+    this.isShown = ! this.isShown; 
+
+    }
+
+
 
 }
