@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 })
 export class ProfileComponent implements OnInit {
 
-  
+
   isLoggedIn: boolean;
   loggedInUser: String;
     constructor(private authService: LoginService, private app: AppComponent,  private router: Router) {
@@ -31,9 +31,8 @@ export class ProfileComponent implements OnInit {
           this.isLoggedIn = false;
         }
       });
-    
-    
   }
+
 
 }
 

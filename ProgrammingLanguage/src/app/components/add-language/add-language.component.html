@@ -1,4 +1,3 @@
-
 <mat-grid-list cols="1" rowHeight="100px">
     <mat-grid-tile [colspan]="1" [rowspan]="2">
 
@@ -9,14 +8,28 @@
 
             <mat-card-content>
                 <form class="form" [formGroup]="this.form">
-                    <p>Name of the language:</p>
-                    <input placeholder="Languagename" formControlName="Name" type="text" class="input-field " />
-                    <p>Name of the founder:</p>
-                    <input placeholder="founder" formControlName="Founder" type="text" class="input-field " />
-                    <p>Year founded:</p>
-                    <input placeholder="founded" formControlName="Founded" type="text" class="input-field " />
-                    <p>Provide a short description of the language!</p>
-                    <input placeholder="description" formControlName="Description" type="text" class="input-field " />
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Name of the language:</mat-label>
+                        <input matInput placeholder="Ex. Python" formControlName="Name">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Name of the founder:</mat-label>
+                        <input matInput formControlName="Founder">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Year founded:</mat-label>
+                        <input matInput placeholder="Ex. 1998" formControlName="Founder">
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width">
+                        <mat-label>Provide a short description</mat-label>
+                        <textarea matInput></textarea>
+                    </mat-form-field>
+
+
 
                 </form>
             </mat-card-content>
@@ -25,4 +38,3 @@
 
             </mat-card-actions>
         </mat-card>
-

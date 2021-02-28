@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -44,7 +45,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
   ],
   imports: [
-
+    MatExpansionModule,
     MatMenuModule,
     MatListModule,
     MatFormFieldModule,

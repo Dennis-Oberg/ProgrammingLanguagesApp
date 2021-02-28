@@ -1,12 +1,25 @@
-
 .mat-form-field {
     display: block;
     text-align: center;
     margin: 10px;
+    color: black;
 }
 
+.mat-card {
+    border-radius: 12px;
+    background-color: rgb(255, 94, 94);
+    box-shadow: 0 0 10px 8px rgb(2, 2, 2);
+}
 
+.form {
+    width: 600px;
+    padding: 20px;
+    align-items: center;
+}
 
-
-
-
+.mat-button {
+    background-color: white;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    width: 200px;
+}
