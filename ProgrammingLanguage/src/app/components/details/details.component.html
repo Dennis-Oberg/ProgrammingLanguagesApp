@@ -1,20 +1,3 @@
-<!--<body>
-    <div class="proglangtitle">
-        <h1>Details</h1>
-    </div>
-    <div class="Wrapper">
-        <div class="DetailsDiv">
-            <ul *ngIf="language">
-                <li>Name: {{ language.Name }} </li>
-                <li>Founder: {{ language.Founder }} </li>
-                <li>Founded: {{ language.Founded }} </li>
-                <li>Description: {{ language.Description }} </li>
-            </ul>
-        </div>
-    </div>
-</body>
--->
-
 <body>
     <mat-grid-list cols="4" rowHeight="100px">
         <mat-grid-tile [colspan]="4" [rowspan]="2">Home</mat-grid-tile>
@@ -38,8 +21,6 @@
                     <button (click)="remove()" mat-button>Remove from database</button>
                 </mat-card-actions>
             </mat-card>
-
-
         </mat-grid-tile>
     </mat-grid-list>
 </body>

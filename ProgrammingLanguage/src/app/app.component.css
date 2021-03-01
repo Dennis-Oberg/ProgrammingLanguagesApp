@@ -30,11 +30,6 @@
         color: white;
     }
 
-    .title {
-        margin-top: 30px;
-        color: white;
-    }
-
     app-login {
         position: absolute;
         width: 600px;
