@@ -15,13 +15,13 @@ export class AddLanguageComponent implements OnInit {
   langForm: FormGroup;
   language: any;
   
-
+  Name: String;
 
   form = new FormGroup({
     Name: new FormControl('',[Validators.required]),
-    Founder:  new FormControl(), 
-    Founded: new FormControl('',[Validators.minLength(4)]),
-    Description: new FormControl()
+    Founder:  new FormControl('',[Validators.required]), 
+    Founded: new FormControl('',[Validators.required, Validators.minLength(4), Validators.maxLength(4)]),
+    Description: new FormControl('',[Validators.required])
 });
 
   constructor(private firestore: AngularFirestore, private fb: FormBuilder) { }
@@ -38,7 +38,7 @@ export class AddLanguageComponent implements OnInit {
             counter++;
         }
     }
-    return counter==input.length;
+    return counter===input.length;
 }
 
 
@@ -62,6 +62,9 @@ export class AddLanguageComponent implements OnInit {
   .catch(e => {
       console.log(e);
   })
+  }
+  else {
+    alert("Year can only contain digits");
   }
 }
 }

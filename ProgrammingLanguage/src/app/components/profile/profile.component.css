@@ -1,3 +1,11 @@
-li {
-    color:white;
+h1 {
+    color: white;
+    font-family: 'Bungee', cursive;
+}
+
+div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
 }

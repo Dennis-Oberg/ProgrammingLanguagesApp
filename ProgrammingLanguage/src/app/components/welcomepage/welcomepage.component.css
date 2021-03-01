@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Open+Sans&display=swap%27');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
+
 .mat-grid-tile:last-of-type {
     background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
     background-position: center;
@@ -15,13 +16,8 @@
     padding: 50px;
     margin: 100px;
     font-family: 'Comfortaa', cursive;
-
     align-items: center;
 }
-
-
-
-
 
 .mat-card-content p {
     font-size: 16px;
