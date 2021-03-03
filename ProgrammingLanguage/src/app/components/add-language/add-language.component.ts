@@ -31,20 +31,14 @@ export class AddLanguageComponent implements OnInit {
 
 
 
-  verifyDigits(input): boolean { //Kollar så att årinparameter bara innehåller siffror
-    let counter = 0;
-    for (var i = 0; i < input.length; i++) {
-      if (parseInt(input.charAt(i))) {
-        counter++;
-      }
+
+  verifyInput(){
+    if(this.form.valid){
+      return true;
     }
-    return counter === input.length;
   }
-
-
-
   onSubmit() {
-    if (this.verifyDigits(this.form.value.Founded)) {
+    if (this.verifyInput()) {
       this.firestore.collection('Languages').add({
         Name: this.form.value.Name,
         Founder: this.form.value.Founder,
@@ -63,4 +57,10 @@ export class AddLanguageComponent implements OnInit {
       alert("Year can only contain digits");
     }
   }
+ 
+
+
+ 
+
+
 }
