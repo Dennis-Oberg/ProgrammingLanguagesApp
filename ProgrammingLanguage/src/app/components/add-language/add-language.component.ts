@@ -70,7 +70,6 @@ export class AddLanguageComponent implements OnInit {
       })
         .then(res => {
           console.log(res);
-          alert("Successfully added " + this.form.value.Name);
           this.form.reset();
           this.navigate();
          
@@ -94,5 +93,5 @@ export class AddLanguageComponent implements OnInit {
 `],
 })
 export class SnackBarComponent{
-  
+
 }

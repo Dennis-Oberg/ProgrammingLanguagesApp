@@ -12,10 +12,15 @@
     color: white;
 }
 
-button.mat-menu-item {
+.mat-raised-button {
     background-color: rebeccapurple;
-    border-radius: 4px;
 }
+
+.mat-raised-button:hover {
+    background-color: rgb(255, 94, 94);
+    cursor:pointer;
+}
+
 
 .mat-grid-tile:last-of-type {
     background-image: url("https://i.ibb.co/VLP3Z32/proglangbg.png");
@@ -50,7 +55,7 @@ button.mat-menu-item {
     top: 0;
     background: rgb(63, 94, 251);
     background: linear-gradient(153deg, rgba(63, 94, 251, 1) 0%, rgba(40, 43, 39, 1) 52%, rgba(195, 77, 151, 1) 100%);
-    border-radius: 6px;
+    
     padding: 10px;
 }
 
@@ -59,7 +64,6 @@ button.mat-menu-item {
 .mat-card-actions {
     margin: 0 16px;
     display: block;
-    margin-bottom: 4px;
 }
 
 .filter {

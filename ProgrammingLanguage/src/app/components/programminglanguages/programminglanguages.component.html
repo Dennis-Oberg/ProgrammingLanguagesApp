@@ -9,7 +9,7 @@
                         <mat-label>Filter</mat-label>
                         <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Java" #input>
                     </mat-form-field>
-                    <button mat-menu-item *ngIf="isLoggedIn" routerLink="/Database-Submit" routerLinkActive="activebutton">Submit to database</button>
+                    <button mat-raised-button *ngIf="isLoggedIn" routerLink="/Database-Submit" routerLinkActive="activebutton">Submit to database</button>
                 </mat-card-header>
                 <mat-card-content>
 
