@@ -59,11 +59,7 @@ export class AppComponent implements OnInit {
             label: 'Home',
             link: './Welcome-Page',
             index: 0
-        }, {
-            label: 'Programming-Languages',
-            link: './Programming-Languages',
-            index: 1
-        }, {
+        },  {
             label: 'IDEs',
             link: './Frameworks',
             index: 2
