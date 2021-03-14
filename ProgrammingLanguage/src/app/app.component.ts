@@ -28,29 +28,48 @@ export class AppComponent implements OnInit {
 
     
     iconRegistry.addSvgIcon('profile', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/user.svg'));
-
-    this.links = [
-      {
-          label: 'Home',
-          link: './Welcome-Page',
-          index: 0
-      }, {
-          label: 'Programming-Languages',
-          link: './Programming-Languages',
-          index: 1
-      }, {
-          label: 'IDEs',
-          link: './Frameworks',
-          index: 2
-      }, 
-      {
-        label: 'Database-Submit',
-        link: './Database-Submit',
-        index: 3
-    },
-  ];
-
-
+  
+   
+   }
+   showLinks(){
+     if(this.isLoggedIn){
+       this.links = [
+        {
+            label: 'Home',
+            link: './Welcome-Page',
+            index: 0
+        }, {
+            label: 'Programming-Languages',
+            link: './Programming-Languages',
+            index: 1
+        }, {
+            label: 'IDEs',
+            link: './Frameworks',
+            index: 2
+        }, 
+        {
+          label: 'Database-Submit',
+          link: './Database-Submit',
+          index: 3
+      },
+    ];
+     } else {
+      this.links = [
+        {
+            label: 'Home',
+            link: './Welcome-Page',
+            index: 0
+        }, {
+            label: 'Programming-Languages',
+            link: './Programming-Languages',
+            index: 1
+        }, {
+            label: 'IDEs',
+            link: './Frameworks',
+            index: 2
+        }, 
+    ];
+     }
    }
   
   ngOnInit() {
@@ -58,9 +77,10 @@ export class AppComponent implements OnInit {
       if (auth) {
         this.isLoggedIn = true;
         this.loggedInUser = auth.email;
-        
+        this.showLinks();
       } else {
         this.isLoggedIn = false;
+        this.showLinks();
       }
     });
 
@@ -71,9 +91,11 @@ export class AppComponent implements OnInit {
 
   }
 
-
   onLogoutClick() {
     this.authService.logOut();
+    this.isLoggedIn = false;
+    this.showLinks();
+
   }
     
 

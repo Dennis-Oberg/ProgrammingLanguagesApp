@@ -13,11 +13,10 @@
     <div class="topwrapper">
         <div class="topnav">
             <nav mat-tab-nav-bar>
-                <a mat-tab-link *ngFor="let link of links"
-                   [routerLink]="link.link" routerLinkActive="activebutton">{{link.label}}</a>
-              </nav>
+                <a mat-tab-link *ngFor="let link of links" [routerLink]="link.link" routerLinkActive="activebutton">{{link.label}}</a>
+            </nav>
 
-             <!-- <mat-tab routerLink="/Welcome-Page" routerLinkActive="activebutton" label="Home"></mat-tab>
+            <!-- <mat-tab routerLink="/Welcome-Page" routerLinkActive="activebutton" label="Home"></mat-tab>
               <mat-tab routerLink="/Programming-Languages" routerLinkActive="activebutton" label="Programming-Languages"></mat-tab>
               <mat-tab routerLink="/Frameworks" routerLinkActive="activebutton" label="Frameworks"></mat-tab>
               <mat-tab routerLink="/Database-Submit" routerLinkActive="activebutton" label="Submit to database"></mat-tab>-->
@@ -30,7 +29,7 @@
             </div>
             <button mat-button>
                     <p *ngIf="!isLoggedIn" (click)="openForm()">Login</p>
-                    <p *ngIf="isLoggedIn" (click)="onLogoutClick()">logout</p>
+                    <p *ngIf="isLoggedIn" (click)="onLogoutClick()" routerLink="/Welcome-Page" routerLinkActive="activebutton">logout</p>
                 </button>
             <app-login id="hiddenlogin"></app-login>
         </div>
