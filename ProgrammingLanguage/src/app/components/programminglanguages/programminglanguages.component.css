@@ -25,7 +25,7 @@ button.mat-menu-item {
 
 .progCard {
     background-color: rgb(255, 94, 94);
-    max-width: 500px;
+    width: 800px;
     min-height: 50%;
     padding: 50px;
     margin: 100px;
@@ -70,7 +70,6 @@ table {
     background-color: rgb(7, 18, 26);
     border-radius: 6px;
     width: 100%;
-
 }
 
 td:hover {

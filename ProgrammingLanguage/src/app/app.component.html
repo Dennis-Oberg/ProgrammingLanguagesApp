@@ -17,17 +17,18 @@
                 <button mat-menu-item routerLink="/Welcome-Page" routerLinkActive="activebutton">Home</button>
                 <button mat-menu-item routerLink="/Programming-Languages" routerLinkActive="activebutton">Programming Languages</button>
                 <button mat-menu-item *ngIf="isLoggedIn" routerLink="/Database-Submit" routerLinkActive="activebutton">Submit to database</button>
+                <!-- <button mat-menu-item *ngIf="isLoggedIn" routerLink="/ProjectOverview" routerLinkActive="activebutton">Project Overview</button> -->
             </mat-menu>
         </div>
-            <div class="loginform">
-                 <div class="loginDiv" *ngIf="isLoggedIn">
-                     <p class="loggedInAs">Logged in as: {{ loggedInUser }}</p>
-                     <mat-icon routerLink="/Profile" routerLinkActive="activebutton" svgIcon="profile" aria-hidden="false" aria-label="Profile page SVG icon"></mat-icon>
-                 </div>
-                <button mat-button>
+        <div class="loginform">
+            <div class="loginDiv" *ngIf="isLoggedIn">
+                <p class="loggedInAs">Logged in as: {{ loggedInUser }}</p>
+                <mat-icon routerLink="/Profile" routerLinkActive="activebutton" svgIcon="profile" aria-hidden="false" aria-label="Profile page SVG icon"></mat-icon>
+            </div>
+            <button mat-button>
                     <p *ngIf="!isLoggedIn" (click)="openForm()">Login</p>
                     <p *ngIf="isLoggedIn" (click)="onLogoutClick()">logout</p>
-                </button>       
+                </button>
             <app-login id="hiddenlogin"></app-login>
         </div>
     </div>

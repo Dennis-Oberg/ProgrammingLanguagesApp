@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from "@Angular/forms";
 import { AngularFirestore } from "@angular/fire/firestore";
-
-
-
+import { MatDialog } from '@angular/material/dialog';
+import { AddlanguagedialogComponent } from '../addlanguagedialog/addlanguagedialog.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-language',
@@ -11,10 +12,9 @@ import { AngularFirestore } from "@angular/fire/firestore";
   styleUrls: ['./add-language.component.css']
 })
 export class AddLanguageComponent implements OnInit {
-
-  langForm: FormGroup;
+  
+  durationInSeconds = 5;
   language: any;
-
   Name: String;
 
   form = new FormGroup({
@@ -24,19 +24,42 @@ export class AddLanguageComponent implements OnInit {
     Description: new FormControl('', [Validators.required])
   });
 
-  constructor(private firestore: AngularFirestore, private fb: FormBuilder) { }
+  constructor(private firestore: AngularFirestore, private snackBar: MatSnackBar, private dialog: MatDialog, private router: Router) { }
 
   ngOnInit(): void {
+
+  }
+  openDialog() {
+    const dialogRef = this.dialog.open(AddlanguagedialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      if(result == true){
+        this.onSubmit();
+       
+      } else{
+        this.errorDialogInput();
+        
+      }
+    
+    });
   }
 
+  errorDialogInput(){
+    this.snackBar.openFromComponent(SnackBarComponent, {
+      duration: this.durationInSeconds * 1000
+    }); 
+  }
 
-
+  navigate(){
+    this.router.navigate(['/Programming-Languages' ]);  
+  }
 
   verifyInput(){
     if(this.form.valid){
       return true;
     }
   }
+
   onSubmit() {
     if (this.verifyInput()) {
       this.firestore.collection('Languages').add({
@@ -48,19 +71,25 @@ export class AddLanguageComponent implements OnInit {
         .then(res => {
           console.log(res);
           this.form.reset();
+          this.navigate();
+         
         })
         .catch(e => {
           console.log(e);
+          this.form.reset();
         })
     }
-    else {
-      alert("Year can only contain digits");
-    }
   }
- 
-
-
- 
-
-
 }
+
+
+@Component({
+  selector:'snackbar',
+  templateUrl:'snackbar.html',
+  styles: [`
+  .snackbar-error {
+    color: hotpink;
+  }
+`],
+})
+export class SnackBarComponent{}

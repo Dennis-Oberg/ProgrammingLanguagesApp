@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from "@Angular/forms";
-import {MatExpansionModule} from '@angular/material/expansion';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDialogModule } from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 
 
@@ -33,6 +36,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
+import { ProjectOverviewComponent } from './components/project-overview/project-overview.component';
+import { AddlanguagedialogComponent } from './components/addlanguagedialog/addlanguagedialog.component';
 
 @NgModule({
   declarations: [
@@ -43,11 +48,15 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     AddLanguageComponent,
     ProfileComponent,
+    ProjectOverviewComponent,
+    AddlanguagedialogComponent,
+    
   ],
   imports: [
     MatExpansionModule,
     MatMenuModule,
     MatListModule,
+    MatDialogModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
@@ -55,6 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     MatButtonModule,
@@ -70,7 +80,7 @@ import { HttpClientModule } from '@angular/common/http';
       {path:'Programming-Languages', component:ProgramminglanguagesComponent},
       {path:'details/:id', component:DetailsComponent,  canActivate:[GuardService] },
       {path:'Login', component:LoginComponent},
-
+      {path:'ProjectOverview', component:ProjectOverviewComponent},
       {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]},
       {path:'Profile', component:ProfileComponent, canActivate:[GuardService]}
 

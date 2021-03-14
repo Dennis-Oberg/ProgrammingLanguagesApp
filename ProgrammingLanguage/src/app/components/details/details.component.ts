@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProgrammingServiceService } from '../../services/programming-service.service';
 import { CProgLanguages } from 'src/model/CProgLanguages';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 @Component({
@@ -26,8 +27,8 @@ export class DetailsComponent implements OnInit {
 
     this.languageService.getLanguage(this.id).subscribe(j => this.language = j);
 
-
   }
+ 
 
   goBack() {
     window.history.back();
