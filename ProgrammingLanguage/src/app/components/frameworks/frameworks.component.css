@@ -1,0 +1,29 @@
+.mat-tab-group {
+    margin-top:100px;
+    padding-bottom:200px;
+    display: grid;
+
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-tab-group
+{
+    justify-content: center;
+    display: flex;
+    align-items: center;  
+}
+
+div img:nth-child(1) {
+    width: 800px;
+    height: 500px;
+}
+
+div img{
+    width: 300px;
+    height: 300px;
+}

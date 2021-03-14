@@ -20,7 +20,7 @@ export class AddLanguageComponent implements OnInit {
   form = new FormGroup({
     Name: new FormControl('', [Validators.required]),
     Founder: new FormControl('', [Validators.required]),
-    Founded: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(4)]),
+    Founded: new FormControl('', [Validators.required, Validators.minLength(4), Validators.maxLength(4), Validators.pattern("^[0-9]*$")]),
     Description: new FormControl('', [Validators.required])
   });
 
@@ -54,7 +54,7 @@ export class AddLanguageComponent implements OnInit {
     this.router.navigate(['/Programming-Languages' ]);  
   }
 
-  verifyInput(){
+  verifyInput(): boolean{
     if(this.form.valid){
       return true;
     }
@@ -70,6 +70,7 @@ export class AddLanguageComponent implements OnInit {
       })
         .then(res => {
           console.log(res);
+          alert("Successfully added " + this.form.value.Name);
           this.form.reset();
           this.navigate();
          
@@ -92,4 +93,6 @@ export class AddLanguageComponent implements OnInit {
   }
 `],
 })
-export class SnackBarComponent{}
+export class SnackBarComponent{
+  
+}

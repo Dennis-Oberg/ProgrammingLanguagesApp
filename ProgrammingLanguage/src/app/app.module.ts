@@ -38,6 +38,9 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { ProjectOverviewComponent } from './components/project-overview/project-overview.component';
 import { AddlanguagedialogComponent } from './components/addlanguagedialog/addlanguagedialog.component';
+import { FrameworksComponent } from './components/frameworks/frameworks.component';
+import {MatTabsModule} from '@angular/material/tabs';
+
 
 @NgModule({
   declarations: [
@@ -50,13 +53,14 @@ import { AddlanguagedialogComponent } from './components/addlanguagedialog/addla
     ProfileComponent,
     ProjectOverviewComponent,
     AddlanguagedialogComponent,
-    
+    FrameworksComponent,
   ],
   imports: [
     MatExpansionModule,
     MatMenuModule,
     MatListModule,
     MatDialogModule,
+    MatTabsModule,
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
@@ -82,8 +86,8 @@ import { AddlanguagedialogComponent } from './components/addlanguagedialog/addla
       {path:'Login', component:LoginComponent},
       {path:'ProjectOverview', component:ProjectOverviewComponent},
       {path:'Database-Submit', component:AddLanguageComponent, canActivate:[GuardService]},
-      {path:'Profile', component:ProfileComponent, canActivate:[GuardService]}
-
+      {path:'Profile', component:ProfileComponent, canActivate:[GuardService]},
+      {path:'Frameworks', component:FrameworksComponent}
 
     ]),
     BrowserAnimationsModule

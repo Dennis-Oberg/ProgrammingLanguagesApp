@@ -18,15 +18,38 @@ import { MatIconRegistry } from '@angular/material/icon';
 })
 export class AppComponent implements OnInit {
   title = 'Programming Languages';
- 
   isLoggedIn: boolean;
   loggedInUser: string;
+  links: any[];
+  activeLinkIndex = -1;
   
 
   constructor(private authService: LoginService, private router: Router, private iconRegistry: MatIconRegistry, sanitizer: DomSanitizer) {
 
     
     iconRegistry.addSvgIcon('profile', sanitizer.bypassSecurityTrustResourceUrl('/assets/images/user.svg'));
+
+    this.links = [
+      {
+          label: 'Home',
+          link: './Welcome-Page',
+          index: 0
+      }, {
+          label: 'Programming-Languages',
+          link: './Programming-Languages',
+          index: 1
+      }, {
+          label: 'Frameworks',
+          link: './Frameworks',
+          index: 2
+      }, 
+      {
+        label: 'Database-Submit',
+        link: './Database-Submit',
+        index: 3
+    },
+  ];
+
 
    }
   
@@ -40,6 +63,12 @@ export class AppComponent implements OnInit {
         this.isLoggedIn = false;
       }
     });
+
+
+    this.router.events.subscribe((res) => {
+      this.activeLinkIndex = this.links.indexOf(this.links.find(tab => tab.link === '.' + this.router.url));
+  });
+
   }
 
 

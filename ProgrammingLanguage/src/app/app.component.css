@@ -51,3 +51,15 @@
     .mat-icon:hover {
         cursor: pointer;
     }
+
+    .mat-menu-item {
+        margin: 10px;
+        padding: 10px;
+        border-style: none;
+    }
+
+    .mat-menu-item:hover {
+       cursor: pointer;
+       background-color: rgb(255, 94, 94);
+    }
+    
