@@ -80,3 +80,9 @@ td:hover {
     background-color: rgb(26, 66, 96);
     cursor: pointer;
 }
+
+.flexHeader {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
