@@ -5,13 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig: {
-    apiKey: "AIzaSyCJ2V6cXL7HBC8N45o_cZOpCM2pFhP8SMA",
-    authDomain: "programming-languages-61090.firebaseapp.com",
-    projectId: "programming-languages-61090",
-    storageBucket: "programming-languages-61090.appspot.com",
-    messagingSenderId: "65380774393",
-    appId: "1:65380774393:web:195f3de9528fbdeee9cd28",
-    measurementId: "G-EFW5SHY4H8"
+   
   }
 };
 
